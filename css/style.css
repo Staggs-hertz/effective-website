@@ -31,13 +31,15 @@ p {
 	justify-content: space-between;
 }
 
-.book-demo-btn {
+.orange-btn {
 	background-color: #fe6813;
 	color: #fff4e4;
 }
 
 /****padding-top for all sections***/
-.stats, .about {
+.stats,
+.about,
+.features {
 	padding-top: 70px;
 }
 
@@ -47,21 +49,24 @@ header {
 	width: 100%;
 	height: 100dvh;
 }
+
 .logo {
 	width: 30%;
 }
+
 .logo img {
 	width: 100px;
 }
 
 .nav-menu {
-	background: transparent!important;
+	background: transparent !important;
 	padding: 12px 0;
 }
 
 .content-item:first-of-type {
 	padding-top: 40px;
 }
+
 .content-item h1 {
 	color: #fff4e4;
 	font-size: 70px;
@@ -70,12 +75,12 @@ header {
 
 /*****stats stylings******/
 
-.stats .row:first-child{
+.stats .row:first-child {
 	margin-bottom: 40px;
 }
 
 .stats-item {
-	background-color: rgba(249, 224, 224, 0.26);
+	background-color: rgba(249, 224, 224, 0.23);
 	border-radius: 20px;
 	width: 32%;
 	padding: 12px 16px;
@@ -106,6 +111,7 @@ header {
 	margin: 10px 0;
 	width: 30px;
 }
+
 .stats-icon {
 	width: 100px;
 	text-align: right;
@@ -117,6 +123,7 @@ header {
 	padding: 14px 16px;
 	border-radius: 20px;
 	margin-bottom: 14px;
+	position: relative;
 }
 
 .about-item:last-of-type h2 {
@@ -129,6 +136,7 @@ header {
 
 .about-inner-item {
 	margin: 14px 0;
+
 }
 
 .about-inner-item img {
@@ -142,8 +150,52 @@ header {
 
 .rate {
 	width: 75%;
-	background-color: rgba(249, 224, 224, 0.26);
-	padding: 14px 20px;
+	background-color: rgba(249, 224, 224, 0.23);
+	padding: 30px 20px;
+	margin-top: 10%;
+}
+
+.rate-pics-btn img {
+	width: 50px;
+	border-radius: 50%;
+	margin: 4px;
+}
+
+.dark-btn {
+	background-color: #000;
+	color: #fff4e4;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 15px;
+}
+
+.secure-button {
+	position: absolute;
+	background-color: #fff;
+	right: 40px;
+	box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+.secure-button img {
+	width: 150px;
+}
+
+.analysis {
+	background-color: #fff;
+	width: 80%;
+	padding: 8px 5px;
+	position: absolute;
+	right: 0;
+	box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.1);
+	right: 10px;
+}
+
+.analysis small {
+	font-weight: bold;
+}
+
+.analysis button {
+	margin-top: 20px;
 }
 
 .mini-title {
@@ -160,13 +212,29 @@ header {
 		--font-size-xl: 1.5rem;
 		--font-size-xxl: 1.8rem;
 	}
+
 	.stats-item {
 		width: 100%;
 	}
+
 	.stats-item h2 {
 		font-size: var(--font-size-xxl);
 	}
+
 	.about-item {
 		width: 100%;
+	}
+
+	.about-item:first-of-type {
+		margin-bottom: 80px;
+	}
+
+	.about .orange-btn {
+		font-size: 12px;
+		/**this is to make the button fit**/
+	}
+
+	.analysis p {
+		font-size: 12px;
 	}
 }
