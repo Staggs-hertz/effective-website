@@ -12,3 +12,6 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+let currentYear = new Date().getFullYear();
+document.getElementById("dynamic-copyright").textContent = currentYear;
