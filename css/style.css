@@ -85,6 +85,7 @@ header {
 
 .content-item:first-of-type {
   padding-top: 40px;
+  width: 35%;
 }
 
 .content-item h1 {
@@ -112,11 +113,12 @@ header {
   background-color: #fff4e4;
   color: #222;
   border-radius: 20px;
+  aspect-ratio: 16 / 9;
 }
 
 .content-item .white-bg h3 {
-  font-weight: 600;
-  margin-bottom: 1px;
+  font-weight: 500;
+  margin-bottom: 2px;
   font-size: 2em;
 }
 
@@ -125,6 +127,7 @@ header {
   background-color: #3a3a3a;
   border-radius: 20px;
   width: 62%;
+  aspect-ratio: 16 / 9;
 }
 
 .content-item .portrait {
@@ -145,12 +148,25 @@ header {
   bottom: 0;
 }
 
+.our-tools-demand {
+  position: relative;
+}
+
 .curvy-line {
   width: 80%;
 }
 
+.our-tools-demand h4 {
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  top: 12px;
+  font-size: var(--font-size-n);
+}
+
 .best-services-links {
-  gap: 5px;
+  gap: 12px;
+  justify-content: center;
 }
 
 .best-services-links a.link {
@@ -169,10 +185,12 @@ header {
 
 .best-services-item {
   align-content: end;
+  aspect-ratio: 2;
 }
 
 .best-services-item .image-set {
   position: relative;
+  cursor: pointer;
 }
 
 .best-services-item .image-set img {
@@ -181,6 +199,7 @@ header {
   border-radius: 50%;
   bottom: 0;
 }
+
 .best-services-item .play-button {
   margin-left: 4.5rem;
   background-color: #fe6813;
@@ -593,13 +612,45 @@ footer .footer-item a {
 }
 
 /***responsive media query code for max-width 900px*******/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   :root {
     /** font sizes**/
     --font-size-m: 1rem;
     --font-size-l: 1.3rem;
     --font-size-xl: 1.5rem;
     --font-size-xxl: 1.8rem;
+  }
+
+  p {
+    font-size: var(--font-size-m);
+  }
+
+  .header-content .col-sm-12 {
+    width: 100%;
+  }
+
+  .content-item:first-of-type {
+    width: 100%;
+  }
+
+  .img-5k img {
+    display: none;
+  }
+
+  .curvy-line {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  .our-tools-demand h4 {
+    font-size: var(--font-size-xl);
+    top: 6%;
+    left: 8%;
+  }
+
+  .best-services-item {
+    align-content: center;
   }
 
   .content-item .gray-bg {
@@ -635,6 +686,10 @@ footer .footer-item a {
     width: 100%;
   }
 
+  .feature-item:last-of-type {
+    width: 100%;
+  }
+
   .feature-inner-item {
     width: 100%;
   }
@@ -649,5 +704,17 @@ footer .footer-item a {
 
   footer .footer-item {
     width: 100%;
+  }
+}
+
+/*responsive media query code for max-width 1024px*/
+.best-services-links a.link {
+  font-size: 0.9rem;
+}
+
+/*responsive media query code for max-width 450px*/
+@media screen and (max-width: 450px) {
+  .best-services-item {
+    align-content: flex-end;
   }
 }
